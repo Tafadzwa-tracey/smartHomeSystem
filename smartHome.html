@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ice cream</title>
+<link rel="stylesheet"  type="text/css"  href="smartHome.css">
+<meta name="viewport" content="width=device-width , initial-scale=1.0">
+<script src="https://kit.fontawesome.com/0c1608366f.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body onload="init();">
+
+  <div class="home">
+  <div class="radio">
+      <input type="radio" name="radiogroup1" id="rd1">
+      <label for="rd1">Back Home</label>
+      <input type="radio" name="radiogroup1" id="rd2">
+      <label for="rd2">Leave Home</label>
+  </div>
+    <!--<img class="home_image" src="images/home.jpg" alt="home">-->
+  </div>
+
+<div class="gallery">
+
+  <figure>
+    <img src="images/off_ac.jpg" alt="air conditioner">
+   <figcaption>
+    <button type="button" class="btn inactive onBtn"><i class="fas fa-power-off on" ></i>On</button>
+   </figcaption>
+   <figcaption>
+    <button type="button" class="btn inactive offBtn"><i class="fas fa-power-off off"></i>Off</button>
+   </figcaption>
+   <figcaption>
+    <button ><i class="fas fa-power-off"></i>+<button>
+   </figcaption>
+   <figcaption>
+    <button ><i class="fas fa-power-off"></i>-</button>
+   </figcaption>
+   <figcaption>
+  <input type="text" placeholder="Enter temperature" name="" value="">
+   </figcaption>
+  </figure>
+
+
+  <figure>
+    <img src="images/off_light.jpg" alt="light_bulb">
+    <figcaption>
+     <button type="button" class="btn1 inactive lightOn"><i class="fas fa-power-off on"></i>On<button>
+    </figcaption>
+    <figcaption>
+     <button type="button" class="btn1 inactive lightOff"><i class="fas fa-power-off off"></i>Off<button>
+    </figcaption>
+  </figure>
+
+
+  <figure>
+    <img src="images/off_sweep.jpg" alt="sweeping robot">
+    <figcaption>
+     <button type="button" class="btn2 inactive floorOn"><i class="fas fa-power-off on"></i>On</button>
+    </figcaption>
+    <figcaption>
+     <button  type="button" class="btn2 inactive floorOff"><i class="fas fa-power-off off"></i>Off<button>
+    </figcaption>
+    <figcaption>
+       <input type="text" placeholder="Set appointment" name="" value="" onclick="setAlarm(this)">
+    </figcaption>
+  </figure>
+
+
+  <figure>
+   <img src="images/off_alarm.jpg" alt="alarm clock">
+     <figcaption>
+      <button type="button" class="btn3 inactive onAlarm"><i class="fas fa-power-off on"></i>On</button>
+     </figcaption>
+    <figcaption>
+     <button type="button" class="btn3 inactive offAlarm"><i class="fas fa-power-off off"></i>Off</button>
+    </figcaption>
+    <form   onsubmit="onSubmit(); return false;">
+      <figcaption >
+        <input type="text" placeholder="Set Alarm :: Event" id="input" onclick="setAlarm(this) " >
+        <input type="submit" value="Set">
+      </figcaption>
+    </form>
+    <!--<form onsubmit="onSubmit(); return false;"></form>
+      <figcaption  >
+       <input type="text" placeholder="Enter event" id="input" onclick="setEvent(this)">
+       <input type="submit" value="Enter">
+      </figcaption>
+    </form>-->
+      
+    
+    
+  </figure>
+</div>
+<form onsubmit="onSubmit(); return false;">
+  <input type="text" id="input">
+  <input type="submit" value="Send">
+  <button onclick="onCloseClick(); return false;">close</button>
+</form>
+<div id="log"></div>
+
+<script src="smartHome.js" charset="utf-88"></script>
+</body>
+</html>
