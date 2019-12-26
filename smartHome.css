@@ -145,6 +145,6 @@ label{
   color:orange;
 }
 
-.btn{color:white}
-.active{background:red}
-.inactive{background:#F0EEEE}
+.btn{color:white;}
+.active{background:red;}
+.inactive{background:#F0EEEE;}
